@@ -16,7 +16,7 @@ module.exports = {
 
             // console.log(verif);
 
-            const insertData = await Sensor.insertMany([req.body]);
+            const insertData = await Sensor.insertMany(req.body);
 
             return res.status(200).json({
                 message: "succesfully insert sensors data!",
