@@ -1,7 +1,8 @@
 module.exports = mongoose => {
     var schema = mongoose.Schema({
         sensor_name: String,
-        value: String
+        value: String,
+        packet_sequence: String
     },{
         timestamps: true
     });
