@@ -46,7 +46,7 @@ module.exports = {
 
     destroyAll: async (req, res) => {
         try {
-            const query = await Sensor.destroy();
+            const query = await Sensor.deleteMany();
 
             return res.status(200).json({
                 message: "succesfully get all sensors data!",
