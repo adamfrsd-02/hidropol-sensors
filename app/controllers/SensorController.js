@@ -42,5 +42,22 @@ module.exports = {
                 message: error.message
             });
         }
+    },
+
+    destroyAll: async (req, res) => {
+        try {
+            const query = await Sensor.destroy();
+
+            return res.status(200).json({
+                message: "succesfully get all sensors data!",
+                data: query
+            });
+        } catch (error) {
+            return res.status(500).json({
+                message: error.message
+            });
+        }
     }
+
+
 }
