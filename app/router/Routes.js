@@ -8,6 +8,9 @@ module.exports = app => {
     //post sensor data
     router.post('/', sensors.create);
 
+    //delete all data
+    router.delete('/', sensors.destroyAll);
+
     //export routing
     app.use('/api/v1/sensors', router);
 }
